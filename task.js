@@ -82,3 +82,19 @@ let data2 = {
 
 console.log(data2.data[0].bookDetails.name) // habluder adda
 console.log(data2.data[1].bookCategory) // Beginner
+
+
+// task - 4
+const oddNumbers = [1, 3, 5, 7, 9];
+
+// using for loop 
+const eventNumbers = [];
+for(let i = 0; i < oddNumbers.length; i++){ 
+    let convertedToEvenNumbers = oddNumbers[i] + 1; 
+    eventNumbers.push(convertedToEvenNumbers);
+}
+console.log(eventNumbers); // [ 2, 4, 6, 8, 10 ]
+
+// using map()
+const eventNumbers2 = oddNumbers.map(evenNum => evenNum + 1);
+console.log(eventNumbers2);
