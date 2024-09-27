@@ -170,3 +170,42 @@ console.log(seniorInstructorNames); // [ 'Nodi', 'Shobuj' ]
 
 ```
 
+
+## Task - 7
+
+const people = [
+    {name: "Meena", age: 20},
+    {name: "Rina", age: 15},
+    {name: "Suchorita", age: 22}
+];
+
+Follow the above array of objects. So you have 3 objects as array element. Can you find out the total sum ages from here?
+
+What are you thinking? Yeah! Do it with for loop. I know you can do it.
+But! Wait !! Wait !! Do the same task using array.reduce() method.
+
+```javascript
+
+const people = [
+    {name: "Meena", age: 20},
+    {name: "Rina", age: 15},
+    {name: "Suchorita", age: 22}
+];
+
+
+// using for loop
+let sumOfAge = 0;
+for(let i = 0; i < people.length; i++){ 
+    sumOfAge += people[i].age;
+}
+
+console.log(sumOfAge); // 57
+
+
+// using reduce() method
+const ages = people.map(singlePeople => singlePeople.age) 
+const sumOfAgeUsingReduce = ages.reduce((previous, current) => previous + current , 0)
+console.log(sumOfAgeUsingReduce); // 57
+
+```
+
