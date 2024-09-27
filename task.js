@@ -98,3 +98,28 @@ console.log(eventNumbers); // [ 2, 4, 6, 8, 10 ]
 // using map()
 const eventNumbers2 = oddNumbers.map(evenNum => evenNum + 1);
 console.log(eventNumbers2);
+
+
+// task - 5
+const numbers = [33, 50, 79, 78, 90, 101, 30];
+
+// using filter()
+const numsOfDivisibleBy10 = numbers.filter(singleNum => singleNum % 10 === 0)
+console.log(numsOfDivisibleBy10); // [ 50, 90, 30 ]
+
+// using find()
+const numOfDivisibleBy10UsingFind = numbers.find(singleNum => singleNum % 10 === 0);
+console.log(numOfDivisibleBy10UsingFind); // 50
+
+
+// task - 7
+
+const intructor = [
+    {name: "Nodi", age: 28, position: "Senior"},
+    {name: "Akil", age: 26, position: "Junior"},
+    {name: "Shobuj", age: 30, position: "Senior"}
+];
+
+const seniorInstructorNames = intructor.filter(instruc => instruc.position === "Senior").map(seniorIns => seniorIns.name)
+
+console.log(seniorInstructorNames); // [ 'Nodi', 'Shobuj' ]

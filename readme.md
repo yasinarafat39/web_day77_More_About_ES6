@@ -101,14 +101,13 @@ console.log(data2.data[1].bookCategory) // Beginner
 ```
 
 
-# Practice Problem map(), filter() and find()
+# Practice Problem with map(), filter() and find() methods
 
 ## Task - 4
 You have an odd array (array with odd numbers) [1, 3, 5, 7, 9]. Now convert this array into an even array (array with even numbers). [2, 4, 6, 8, 10]. Do this using for loop & array.map() method. 
 
 ```javaScript
 
-// task - 4
 const oddNumbers = [1, 3, 5, 7, 9];
 
 // using for loop 
@@ -128,7 +127,46 @@ console.log(eventNumbers2); // [ 2, 4, 6, 8, 10 ]
 
 
 ## Task - 5
+You are given an array say: [33, 50, 79, 78, 90, 101, 30]. Now return/get all, the elements which divisible by 10 using array.filter() method.
+
+Now do the same task using array.find() method. Then compare output of task - 5 and task - 6.
+
+```javaScript
+
+const numbers = [33, 50, 79, 78, 90, 101, 30];
+
+// using filter()
+const numsOfDivisibleBy10 = numbers.filter(singleNum => singleNum % 10 === 0)
+console.log(numsOfDivisibleBy10); // [ 50, 90, 30 ]
+
+// using find()
+const numOfDivisibleBy10UsingFind = numbers.find(singleNum => singleNum % 10 === 0);
+console.log(numOfDivisibleBy10UsingFind); // 50
+
+```
+
 ## Task - 6
+You have an array of objects:
 
+const intructor = [
+    {name: "Nodi", age: 28, position: "Senior"},
+    {name: "Akil", age: 26, position: "Junior"},
+    {name: "Shobuj", age: 30, position: "Senior"}
+];
 
+Your task is to display the intructor names that has the position senior using filter() method.
+
+```javascript
+
+const intructor = [
+    {name: "Nodi", age: 28, position: "Senior"},
+    {name: "Akil", age: 26, position: "Junior"},
+    {name: "Shobuj", age: 30, position: "Senior"}
+];
+
+const seniorInstructorNames = intructor.filter(instruc => instruc.position === "Senior").map(seniorIns => seniorIns.name)
+
+console.log(seniorInstructorNames); // [ 'Nodi', 'Shobuj' ]
+
+```
 
