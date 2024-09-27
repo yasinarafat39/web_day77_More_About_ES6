@@ -1,4 +1,4 @@
-### Practice Task
+# Practice Task
 
 ## Task - 1
 
